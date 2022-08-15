@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img class="logo" src="/img/logo.jpg" alt="Logo"/></a>
+        <nav>
+            <ul>
+                <li><a class="linkbutton" href="/About">About</a></li>
+                <li><a class="linkbutton" href="/Contact">Contact</a></li>
+                <li><a class="linkbutton" href="/Projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        &copy;@DateTime.Now.ToString("yyyy-MM-dd") Kurt Lexicon
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿
+/*** Page ***/
+
+html {
+    height: 100%;
+    display: flex;
+    font-family: sans-serif;
+    background-color: gainsboro;
+}
+
+body {
+    width: 1024px;
+    max-width: 100%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: hidden; /* Hide scrollbar */
+}
+
+/*** General ***/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.linkbutton {
+    min-height: 2em;
+    min-width: 6em;
+    padding: 2px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+    .linkbutton:hover {
+        font-weight: bold;
+        padding: 0 4px;
+        border-width: 2px;
+        color: black;
+    }
+
+    .linkbutton:active {
+        position: relative;
+        left: 0.1em;
+        top: 0.1em;
+        color: black;
+    }
+
+/*** Page Header & Navigation Bar ***/
+
+header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-shrink: 0;
+    border-bottom-width: 3px;
+    max-height: 30%;
+    margin-bottom:0.5em;
+}
+
+    header .logo {
+        padding: 0;
+        width: 6em;
+    }
+
+    header nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        font-size: larger;
+        padding: 0;
+    }
+
+        header nav * {
+            padding: 0;
+        }
+
+        header nav ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        header nav li {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header nav a {
+            background-color: rgb(92, 218, 102);
+            height: 100%;
+        }
+
+        header nav li:nth-child(odd) a {
+            background-color: #ffffb0;
+        }
+
+        header nav li:nth-child(even) a {
+            background-color: #ffffe8;
+        }
+
+/*** Scroll Area ***/
+
+main {
+    padding-top: 1em;
+    flex-shrink: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*** Main Content Area ***/
+
+.projectlinks {
+    font-size: 120%;
+}
+
+/*** Footer ***/
+
+footer {
+    border-top-width: 3px;
+    padding-top: 1em;
+    flex-shrink: 0;
+    font-style: italic;
+    font-weight: bold;
+}
