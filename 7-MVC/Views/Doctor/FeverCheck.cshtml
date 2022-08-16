@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Doctor";
+}
+
+<h1>Doctor</h1>
+<h2>Fever check</h2>
+<div class="FeverCheckPage">
+
+    <p>Please enter your body temperature in centigrades:</p>
+    <form>
+        <div class="formgrid">
+            <label>Temperature:</label>
+            <input class="forminput" type="text" name="temperature" autofocus>
+        </div>
+        <div class="formbuttons">
+            <input class="button reset" type="reset" value="Reset">
+            <input class="button submit" type="submit" value="Submit">
+        </div>
+    </form>
+    <p class="fevermessage">
+        @ViewBag.Message
+    </p>
+</div>

@@ -28,4 +28,15 @@ app.MapControllerRoute(
     pattern: "Projects",
     defaults: new { controller = "Home", action = "Projects" });
 
+app.MapControllerRoute (
+    "Default",                                              // Route name
+    "Doctor/{action}/{id}",                                 // URL with parameters
+    new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
+);
+
+app.MapControllerRoute(
+    name: "FeverCheck",
+    pattern: "FeverCheck/{temperature?}",
+    defaults: new { controller = "Doctor", action = "FeverCheck"});
+
 app.Run();
