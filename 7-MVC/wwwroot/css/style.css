@@ -80,135 +80,7 @@ h1 {
             background-color: rgb(132, 251, 132);
         }
 
-
-/*** Header ***/
-
-header {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-shrink: 0;
-    border-bottom-width: 3px;
-    max-height: 30%;
-    margin-bottom: 0.5em;
-    font-size: 2.9vw;
-}
-
-    header .logo {
-        width: 5em;
-        height: 2em;
-    }
-
-        header .logo > img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-    header > nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        width: 100%;
-    }
-
-    header nav li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        list-style-type: none;
-    }
-
-        header nav li:nth-child(odd) a {
-            background-color: #ffffb0;
-        }
-
-        header nav li:nth-child(even) a {
-            background-color: #ffffe8;
-        }
-
-    header nav .linkbutton {
-        min-height: 2em;
-        min-width: 6em;
-        padding: 0 0.5em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        text-decoration: none;
-        color: black;
-    }
-
-        header nav .linkbutton:hover {
-            font-weight: bold;
-            padding: 0 4px;
-            border-width: 2px;
-            color: black;
-        }
-
-        header nav .linkbutton:active {
-            position: relative;
-            left: 0.1em;
-            top: 0.1em;
-            color: black;
-        }
-
-        header nav .linkbutton a {
-            background-color: rgb(92, 218, 102);
-            height: 100%;
-        }
-
-
-/*** Main Area ***/
-
-main {
-    padding-top: 1em;
-    flex-shrink: 1;
-    overflow-y: auto;
-    padding-bottom: 0.5em;
-}
-
-
-/*** Footer ***/
-
-footer {
-    border-top-width: 3px;
-    padding-top: 1em;
-    flex-shrink: 0;
-    font-style: italic;
-    font-weight: bold;
-}
-
-/**************************
-*** Page specific
-**************************/
-
-/*** Projects ***/
-
-.projectlinks {
-    font-size: 120%;
-}
-
-/*** FeverCheck ***/
-
-.FeverCheckPage {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-    .FeverCheckPage > * {
-        margin: 0.5em 0;
-    }
+/** Forms **/
 
 form {
     font-size: 120%;
@@ -251,9 +123,203 @@ form {
         margin-left: 0.5em;
     }
 
+
+/**************************
+*** Header
+**************************/
+
+
+header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-shrink: 0;
+    border-bottom-width: 3px;
+    max-height: 30%;
+    margin-bottom: 0.5em;
+    font-size: 2.0vw;
+}
+
+    header .logo {
+        width: 3em;
+        height: 2em;
+    }
+
+        header .logo > img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    header > nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    header nav li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+    }
+
+        header nav li:nth-child(odd) a {
+            background-color: #ffffb0;
+        }
+
+        header nav li:nth-child(even) a {
+            background-color: #ffffe8;
+        }
+
+    header nav .linkbutton {
+        min-height: 2em;
+        min-width: 8em;
+        padding: 0 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+
+        header nav .linkbutton:hover {
+            font-weight: bold;
+            min-height: 1.9em;
+            min-width: 7.8em;
+            border-width: 0.1em;
+            color: black;
+        }
+
+        header nav .linkbutton:active {
+            position: relative;
+            left: 0.1em;
+            top: 0.1em;
+            color: black;
+        }
+
+        header nav .linkbutton a {
+            background-color: rgb(92, 218, 102);
+            height: 100%;
+        }
+
+/**************************
+*** Main
+**************************/
+
+main {
+    padding-top: 1em;
+    flex-shrink: 1;
+    overflow-y: auto;
+    padding-bottom: 0.5em;
+}
+
+/**************************
+*** Modal
+**************************/
+
+.modal {
+    display:nond;
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%
+}
+
+.modal img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/**************************
+*** Footer
+**************************/
+
+footer {
+    border-top-width: 3px;
+    padding-top: 1em;
+    flex-shrink: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/**************************
+*** Page specific
+**************************/
+
+/*** Projects ***/
+
+.projectlinks {
+    font-size: 120%;
+}
+
+/*** FeverCheck ***/
+
+.FeverCheckPage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .FeverCheckPage > * {
+        margin: 0.5em 0;
+    }
+
 .fevermessage {
     font-size: 120%;
     font-weight: bold;
     color: red;
     height: 1.5em;
 }
+
+/*** GuessingGame ***/
+
+.GuessingGame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .GuessingGame > * {
+        margin: 0.5em 0;
+    }
+
+
+.GuessingGame .morevisible {
+    font-size: 105%;
+    font-weight:bold;
+}
+
+.guessingmessage {
+    font-size: 120%;
+    font-weight: bold;
+    height: 1.5em;
+    color: blue;
+}
+
+    .guessingmessage.success {
+        color: yellowgreen;
+        background-color: blue;
+        padding-top: 0.3em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        border-radius:0.5em;
+    }
+
+    .guessingmessage.error {
+        color: red;
+        height: 3.0em;
+    }
+

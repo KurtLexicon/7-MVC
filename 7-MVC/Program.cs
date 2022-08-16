@@ -1,10 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSession();
 builder.Services.AddMvc();
 
 var app = builder.Build();
-
-// app.MapGet("/", () => "Hello World!");
+app.UseSession();
 
 app.UseStaticFiles();
 app.UseRouting();
@@ -28,15 +28,14 @@ app.MapControllerRoute(
     pattern: "Projects",
     defaults: new { controller = "Home", action = "Projects" });
 
-app.MapControllerRoute (
-    "Default",                                              // Route name
-    "Doctor/{action}/{id}",                                 // URL with parameters
-    new { controller = "Home", action = "Index", id = "" }  // Parameter defaults
-);
-
 app.MapControllerRoute(
     name: "FeverCheck",
     pattern: "FeverCheck/{temperature?}",
-    defaults: new { controller = "Doctor", action = "FeverCheck"});
+    defaults: new { controller = "Doctor", action = "FeverCheck" });
+
+app.MapControllerRoute(
+    name: "GuessingGame",
+    pattern: "GuessingGame/{guess?}",
+    defaults: new { controller = "Game", action = "GuessingGame" });
 
 app.Run();

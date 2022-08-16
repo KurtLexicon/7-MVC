@@ -1,0 +1,56 @@
+﻿@using _7_MVC.Models;
+@{
+    ViewData["Title"] = "7 - Guessing Game";
+    GuessingGame.SessionData data = ViewBag.SessionData;
+    string strCorrectInterval = $"The correct number is between {data.LowerBound} and {data.UpperBound}";
+    string strNTries = $"So far you have tried {data.NGuesses} times";
+    //    string messageClasses = data.IsSuccess ? "guessingmessage success" : "guessingmessage";
+
+
+    string messageClasses = "";
+    string messageLine1 = "";
+    string messageLine2 = "";
+
+    if(!string.IsNullOrWhiteSpace(ViewBag.ErrorMessage)) {
+        messageClasses = "guessingmessage error";
+        messageLine1 = ViewBag.ErrorMessage;
+        messageLine2 = "";
+
+    }  else if (data == null){
+        messageClasses = "guessingmessage error";
+        messageLine1 = "Missing data, please try again";
+        messageLine2 = "";
+
+    } else {
+        messageClasses = data.IsSuccess ? "guessingmessage success" : "guessingmessage";
+        messageLine1 = @data.MessageLine1 ?? "Success!!";
+        messageLine2 = @data.MessageLine2 ?? "";
+    }
+}
+
+<h1>Find the Secret Number</h1>
+
+<div class="GuessingGame">
+    <p>
+        Find the Secret Number in the range <span class="morevisible">@data.LowerBound to @data.UpperBound</span> (inclusive)
+    </p>
+    @using (Html.BeginForm(FormMethod.Post)) {
+        <div class="formgrid">
+            <label>Your Guess:</label>
+            <input class="forminput" type="text" name="guess" autofocus>
+        </div>
+        <div class="formbuttons">
+            <input class="button reset" type="reset" value="Reset">
+            <input class="button submit" type="submit" value="Submit">
+        </div>
+    }
+
+    <p class="@messageClasses">
+        @messageLine1
+    </p>
+    <p class="guessingmessage">
+        @messageLine2
+    </p>
+
+</div>
+
